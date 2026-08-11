@@ -37,9 +37,11 @@ Entity Couple digunakan untuk:
 
 ### Structure
 
+```
 Couple
 ├── Bride
 └── Groom
+```
 
 **Bride**
 
@@ -101,14 +103,17 @@ Parents menyimpan informasi mengenai orang tua mempelai pria.
 
 ### Relationship
 
+```
 Couple
 ├── Bride
 │ └── Parents
 └── Groom
 └── Parents
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Couple
 ├── Bride
 │ ├── Full Name
@@ -129,6 +134,7 @@ Couple
 │ └── Mother
 ├── Instagram
 └── Child Order
+```
 
 ### Data Usage
 
@@ -162,17 +168,21 @@ Entity Event digunakan untuk:
 
 ### Structure
 
+```
 Events
 ├── Event
 ├── Event
 └── Event
+```
 
 **Contoh:**
 
+```
 Events
 ├── Akad Nikah
 ├── Resepsi
 └── Ngunduh Mantu
+```
 
 **Event**
 
@@ -203,18 +213,22 @@ Satu Event merepresentasikan satu acara dalam rangkaian wedding.
 
 ### Relationship
 
+```
 Wedding
 └── Events
 ├── Event
 ├── Event
 └── Event
+```
 
 **Contoh:**
 
+```
 Wedding
 └── Events
 ├── Akad Nikah
 └── Resepsi
+```
 
 ### Data Usage
 
@@ -248,21 +262,25 @@ Entity Gallery digunakan untuk:
 
 ### Structure
 
+```
 Gallery
 ├── Media Item
 ├── Media Item
 └── Media Item
+```
 
 Setiap Media Item dapat berupa gambar atau video.
 
 **Contoh:**
 
+```
 Gallery
 ├── Image
 ├── Image
 ├── Video
 ├── Image
 └── Video
+```
 
 **Media Item**
 
@@ -295,14 +313,17 @@ Media Item dapat berupa gambar maupun video. Jenis media ditentukan oleh attribu
 
 ### Relationship
 
+```
 Wedding
 └── Gallery
 ├── Media Item
 ├── Media Item
 └── Media Item
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Gallery
 │
 ├── Media Item
@@ -319,6 +340,7 @@ Gallery
 ├── Type: Video
 ├── Source: prewedding.mp4
 └── Order: 3
+```
 
 ### Data Usage
 
@@ -350,10 +372,12 @@ Entity Story digunakan untuk:
 
 ### Structure
 
+```
 Story
 ├── Story Item
 ├── Story Item
 └── Story Item
+```
 
 **Story Item**
 
@@ -380,14 +404,17 @@ Story Item merepresentasikan satu momen atau peristiwa penting dalam perjalanan 
 
 ### Relationship
 
+```
 Wedding
 └── Story
 ├── Story Item
 ├── Story Item
 └── Story Item
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Story
 └── Story Item
 ├── Title
@@ -395,6 +422,7 @@ Story
 ├── Description
 ├── Image
 └── Order
+```
 
 ### Data Usage
 
@@ -425,10 +453,12 @@ Entity Gift digunakan untuk:
 
 ### Structure
 
+```
 Gift
 ├── Gift Item
 ├── Gift Item
 └── Gift Item
+```
 
 **Gift Item**
 
@@ -460,14 +490,17 @@ yang dapat digunakan oleh tamu.
 
 ### Relationship
 
+```
 Wedding
 └── Gift
 ├── Gift Item
 ├── Gift Item
 └── Gift Item
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Gift
 └── Gift Item
 ├── Type
@@ -477,6 +510,7 @@ Gift
 ├── Logo
 ├── Description
 └── Order
+```
 
 ### Data Usage
 
@@ -509,10 +543,12 @@ Entity Guest digunakan untuk:
 
 ### Structure
 
+```
 Guests
 ├── Guest
 ├── Guest
 └── Guest
+```
 
 **Guest**
 
@@ -544,6 +580,7 @@ Guest merepresentasikan satu penerima atau satu kelompok penerima undangan.
 
 ### Relationship
 
+```
 Wedding
 └── Guests
 └── Guest
@@ -554,9 +591,11 @@ Wedding
 ├── Guest Count
 ├── RSVP Status
 └── Message
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Guests
 ├── Guest
 │ ├── Name: Dedi
@@ -569,6 +608,7 @@ Guests
 └── Guest
 ├── Name: Keluarga Pak Andi
 └── Slug: keluarga-pak-andi
+```
 
 ### Data Usage
 
@@ -603,10 +643,12 @@ Entity Wishes digunakan untuk:
 
 ### Structure
 
+```
 Wishes
 ├── Wish Item
 ├── Wish Item
 └── Wish Item
+```
 
 **Wish Item**
 
@@ -634,6 +676,7 @@ Wish Item merepresentasikan satu ucapan atau pesan yang dikirimkan oleh seorang 
 
 ### Relationship
 
+```
 Wedding
 └── Wishes
 └── Wish Item
@@ -645,15 +688,18 @@ Wedding
 Guest
 └── Wishes
 └── Wish Item
+```
 
 **Struktur Lengkap Relationship**
 
+```
 ├── Wishes
 │ └── Wish Item
 │ ├── Guest
 │ ├── Message
 │ ├── Created At
 │ └── Status
+```
 
 ### Data Usage
 
@@ -687,8 +733,10 @@ Entity Theme digunakan untuk:
 
 ### Structure
 
+```
 Theme
 └── Theme Configuration
+```
 
 **Theme Configuration**
 
@@ -720,12 +768,15 @@ Theme Configuration merepresentasikan konfigurasi visual yang digunakan untuk me
 
 ### Relationship
 
+```
 Wedding
 └── Theme
 └── Theme Configuration
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Wedding
 └── Theme
 └── Theme Configuration
@@ -733,6 +784,7 @@ Wedding
 ├── Primary Color: ...
 ├── Heading Font: ...
 └── Body Font: ...
+```
 
 ### Data Usage
 
@@ -767,8 +819,10 @@ Entity Music digunakan untuk:
 
 ### Structure
 
+```
 Music
 └── Music Configuration
+```
 
 **Music Configuration**
 
@@ -796,17 +850,21 @@ Music Configuration merepresentasikan konfigurasi audio yang digunakan oleh sebu
 
 ### Relationship
 
+```
 Wedding
 └── Music
 └── Music Configuration
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Theme
 └── Theme Configuration
 
 Music
 └── Music Configuration
+```
 
 ### Data Usage
 
@@ -839,8 +897,10 @@ Entity Config digunakan untuk:
 
 ### Structure
 
+```
 Config
 └── Configuration
+```
 
 **Configuration**
 
@@ -871,12 +931,15 @@ Configuration merepresentasikan kumpulan pengaturan umum yang digunakan oleh seb
 
 ### Relationship
 
+```
 Wedding
 └── Config
 └── Configuration
+```
 
 **Struktur Lengkap Relationship**
 
+```
 Wedding
 │
 ├── CONTENT
@@ -894,6 +957,7 @@ Wedding
 ├── Theme
 ├── Music
 └── Config
+```
 
 ### Data Usage
 
@@ -906,6 +970,7 @@ Entity Config akan digunakan pada beberapa bagian berikut:
 
 ## Folder Structure
 
+```
 Wedding
 │
 ├── Couple ✅
@@ -1004,3 +1069,4 @@ Wedding
 │ ├── Show Wishes
 │ ├── Show RSVP
 └ └── Show Music
+```
